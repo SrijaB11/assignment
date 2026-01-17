@@ -1,0 +1,34 @@
+.right-up {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-list {
+  display: flex;
+  gap: 30px;
+  list-style-type: none;
+  gap: 30px;
+}
+.right {
+  display: flex;
+  flex-direction: column;
+  width: 1028px;
+}
+hr {
+  color: white;
+  width: 1000px;
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  margin: 70px;
+  background-color: #111538;
+  color: white;
+  font-size: 15px;
+  font-family: "Poppins";
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+}

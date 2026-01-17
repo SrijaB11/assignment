@@ -1,0 +1,22 @@
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 1248px;
+  height: 680px;
+  gap: 40px;
+}
+.left-hero-section {
+  width: 660px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  gap: 36px;
+}
+.right-hero-section {
+  width: 400px;
+  height: 680px;
+}

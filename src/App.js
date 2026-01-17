@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+import "./App.css";
+//import Button from "@mui/material/Button";
+import Home from "./Pages/Home/Home";
+//import Aboutus from "./Pages/Aboutus/Aboutus";
+import Coding from "./Pages/Coding/Coding";
+import MCQS from "./Pages/MCQs/MCQS";
+import Register from "./Pages/Register/Register";
+import Login from "./Pages/Login/Login";
+import Navbar from "./Common/Navbar/Navbar";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        {/* <Route path="/about" element="Aboutus" /> */}
+        <Route path="/coding" element={<Coding />} />
+        <Route path="/mcqs" element={<MCQS />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
+    </BrowserRouter>
+
+    // <div>
+    //   <Button variant="contained">Hello MUI</Button>;
+    // </div>
   );
 }
 

@@ -1,0 +1,7 @@
+.hero-bg-img {
+  background-image: url("../../assets/images/BgSymbol.png");
+  width: 535px;
+  height: 590px;
+
+  background-size: cover;
+}
