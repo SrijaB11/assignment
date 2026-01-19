@@ -38,10 +38,10 @@ function Hero() {
       </div>
 
       <div className="vector">
-        <img src={star} />
+        <img src={star} alt="star" />
       </div>
       <div className="vector">
-        <img src={starright} />
+        <img src={starright} alt="starright" />
       </div>
     </div>
   );
