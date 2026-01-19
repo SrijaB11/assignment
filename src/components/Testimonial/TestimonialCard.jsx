@@ -1,67 +1,8 @@
-// import { Box, Paper, Typography, Avatar } from "@mui/material";
-// import StarIcon from "@mui/icons-material/Star";
-
-// export default function TestimonialCard({ name, role, review, rating }) {
-//   return (
-//     <Paper
-//       elevation={6}
-//       sx={{
-//         width: 320,
-//         position: "relative",
-//         overflow: "hidden",
-//         bgcolor: "background.paper",
-//       }}
-//     >
-//       <Box
-//         sx={{
-//           display: "flex",
-//           alignItems: "center",
-//           gap: 1.5,
-//           bgcolor: "primary.main",
-//           color: "common.white",
-//           p: 2,
-//         }}
-//       >
-//         <Avatar />
-
-//         <Box sx={{ flexGrow: 1 }}>
-//           <Typography fontWeight={600}>{name}</Typography>
-//           <Typography variant="caption">{role}</Typography>
-//         </Box>
-
-//         <Box sx={{ display: "flex" }}>
-//           {Array.from({ length: rating }).map((_, i) => (
-//             <StarIcon key={i} fontSize="small" />
-//           ))}
-//         </Box>
-//       </Box>
-
-//       <Box sx={{ p: 3 }}>
-//         <Typography variant="body2" color="text.secondary">
-//           “{review}”
-//         </Typography>
-//       </Box>
-
-//       <Typography
-//         sx={{
-//           position: "absolute",
-//           bottom: -30,
-//           left: 16,
-//           fontSize: 90,
-//           color: "primary.main",
-//           opacity: 0.15,
-//         }}
-//       >
-//         “
-//       </Typography>
-//     </Paper>
-//   );
-// }
-
 import { Paper, Box, Typography, Avatar, Stack } from "@mui/material";
 import StarIcon from "@mui/icons-material/Star";
+import quote from "../../assets/vectors/quote.png";
 
-const TestimonialCard = ({ name, role, text, image }) => {
+const TestimonialCard = ({ name, role, review, image }) => {
   return (
     <Paper
       elevation={8}
@@ -69,6 +10,7 @@ const TestimonialCard = ({ name, role, text, image }) => {
         p: 3,
         width: 380,
         backgroundColor: "background.paper",
+        position: "relative",
       }}
     >
       {/* Header strip */}
@@ -76,15 +18,22 @@ const TestimonialCard = ({ name, role, text, image }) => {
         sx={{
           backgroundColor: "primary.main",
           color: "white",
-          borderRadius: 2,
-          p: 1.5,
+
           display: "flex",
           alignItems: "center",
           gap: 2,
           mb: 2,
+          position: "absolute",
+          top: "-20px",
+          left: "-20px",
         }}
       >
-        <Avatar src={image} alt={name} />
+        <Avatar
+          src={image}
+          alt={name}
+          variant="square"
+          sx={{ width: 86, height: 76 }}
+        />
 
         <Box flex={1}>
           <Typography fontWeight={600}>{name}</Typography>
@@ -99,8 +48,13 @@ const TestimonialCard = ({ name, role, text, image }) => {
       </Box>
 
       {/* Quote text */}
-      <Typography variant="body1" color="text.primary">
-        {text}
+      <Typography
+        variant="body1"
+        color="text.primary"
+        marginTop={"80px"}
+        paddingBottom={"30px"}
+      >
+        {review}
       </Typography>
 
       {/* Quote mark */}
@@ -110,9 +64,11 @@ const TestimonialCard = ({ name, role, text, image }) => {
           color: "primary.main",
           lineHeight: 1,
           mt: 2,
+          position: "absolute",
+          bottom: "-40px",
         }}
       >
-        “
+        <img src={quote} />
       </Typography>
     </Paper>
   );

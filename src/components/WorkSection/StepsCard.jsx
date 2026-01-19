@@ -46,11 +46,12 @@ export default function StepsCard({ number, title }) {
       elevation={4}
       sx={{
         p: 2.5,
-        borderRadius: 3,
+        borderRadius: "15px",
         display: "flex",
         alignItems: "center",
         bgcolor: "white",
-        maxWidth: 420,
+        maxWidth: "500px",
+        maxHeight: "101px",
       }}
     >
       <Typography

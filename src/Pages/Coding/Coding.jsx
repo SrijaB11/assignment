@@ -214,6 +214,7 @@ import {
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { questions } from "./CodingData";
+import LightbulbOutlinedIcon from "@mui/icons-material/LightbulbOutlined";
 
 /* -------------------- MAIN COMPONENT -------------------- */
 export default function Coding() {
@@ -298,8 +299,18 @@ function QuestionsTable({ onSolve }) {
               <TableCell sx={cellStyle} align="center">
                 {q.language}
               </TableCell>
-              <TableCell sx={cellStyle} align="center">
-                <Button variant="contained" color="primary">
+              <TableCell
+                sx={cellStyle}
+                display="flex"
+                flexDirection="column"
+                align="center"
+              >
+                {/* SOLVE BUTTON WITH BULB */}
+                <Button
+                  variant="contained"
+                  color="primary"
+                  startIcon={<LightbulbOutlinedIcon />}
+                >
                   Solve
                 </Button>
               </TableCell>

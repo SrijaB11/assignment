@@ -225,7 +225,7 @@ const theme = createTheme({
       color: "Black",
       fontFamily: "Poppins",
 
-      fontWeight: "600px",
+      fontWeight: 600,
       fontStyle: "SemiBold",
       fontSize: "35px",
 

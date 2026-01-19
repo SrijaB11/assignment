@@ -1,5 +1,5 @@
 /* PAGE */
-.login-page {
+.register-page {
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -8,7 +8,7 @@
 }
 
 /* CONTAINER */
-.login-container {
+.register-container {
   width: 100%;
   max-width: 1200px;
   margin: auto;
@@ -19,11 +19,11 @@
 }
 
 /* LEFT SIDE */
-.login-left {
+.register-left {
   max-width: 600px;
 }
 
-.login-left h1 {
+.register-left h1 {
   font-size: 40px;
   font-weight: 600;
   color: #111827;
@@ -38,31 +38,30 @@
 }
 
 /* FORM */
-.login-form {
+.register-form {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.login-form input {
+.register-form input {
   height: 56px;
   padding: 0 20px;
   border-radius: 16px;
   border: 1px solid #e5e7eb;
   font-size: 15px;
   outline: none;
-
   color: black;
   font-family: "Roboto";
 }
 
-.login-form input::placeholder {
+.register-form input::placeholder {
   color: #030303;
-  font-family: 600;
+  font-weight: 600;
 }
 
 /* BUTTON */
-.login-form button {
+.register-form button {
   height: 56px;
   border-radius: 16px;
   border: none;
@@ -73,37 +72,37 @@
   cursor: pointer;
 }
 
-.login-form button:hover {
+.register-form button:hover {
   background-color: #2f3475;
 }
 
-/* SIGNUP TEXT */
-.signup-text {
+/* LOGIN TEXT */
+.login-text {
   margin-top: 32px;
   text-align: center;
   font-size: 18px;
   color: #111827;
 }
 
-.signup-text a {
+.login-text a {
   color: #e11d48;
   font-weight: 600;
   text-decoration: none;
 }
 
 /* RIGHT SIDE */
-.login-right {
+.register-right {
   display: flex;
   justify-content: flex-end;
 }
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
-  .login-container {
+  .register-container {
     justify-content: center;
   }
 
-  .login-right {
+  .register-right {
     display: none;
   }
 }

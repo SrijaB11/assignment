@@ -208,7 +208,7 @@ import { Box, Grid, Typography } from "@mui/material";
 import StepCard from "./StepsCard";
 import women from "../../assets/images/Image.png";
 
-// import arrow1 from "../../assets/vectors/arrow-1.svg";
+import arrow1 from "../../assets/vectors/arrow1.png";
 // import arrow2 from "../../assets/vectors/arrow-2.svg";
 
 const steps = [
@@ -221,8 +221,7 @@ const steps = [
 
 export default function WorkSection() {
   return (
-    <Box sx={{ position: "relative", overflow: "hidden" }}>
-      {/* Background split */}
+    <Box sx={{ position: "relative", overflow: "hidden", height: "880px" }}>
       <Box
         sx={{
           position: "absolute",
@@ -231,30 +230,26 @@ export default function WorkSection() {
           zIndex: 0,
         }}
       >
-        <Box sx={{ width: "50%", bgcolor: "#3A3F8F" }} />
-        <Box sx={{ width: "50%", bgcolor: "primary.main" }} />
+        <Box sx={{ width: "100%", bgcolor: "primary.main" }} />
       </Box>
 
       <Box
         sx={{
           position: "relative",
           zIndex: 1,
-          py: 10,
-          px: 8,
         }}
       >
-        {/* 🔴 IMPORTANT: wrap="nowrap" */}
         <Grid container spacing={6} alignItems="flex-start" wrap="nowrap">
           {/* LEFT IMAGE */}
 
           <Grid
             item
             xs={6}
-            sx={{
-              pl: "180px", // pushes cards into red area like Figma
-            }}
+            // sx={{
+            //   pl: "180px", // pushes cards into red area like Figma
+            // }}
           >
-            <Box sx={{ mt: 8 }}>
+            <Box>
               <Box
                 component="img"
                 src={women}
@@ -269,7 +264,7 @@ export default function WorkSection() {
           </Grid>
 
           {/* RIGHT CONTENT */}
-          <Grid item xs={6}>
+          <Grid item xs={6} width={"600px"}>
             <Typography variant="h3" color="white" mb={2} textAlign="left">
               How It Works
             </Typography>
@@ -284,6 +279,17 @@ export default function WorkSection() {
               Simplify the onboarding process by showing how easy it is to start
               using CodeArena.
             </Typography>
+            <Box
+              component="img"
+              src={arrow1} // <-- put vector here
+              alt="arrow"
+              sx={{
+                position: "absolute",
+                right: -40, // NOT -90
+                top: "60%",
+                width: 90,
+              }}
+            />
 
             {/* STEPS */}
             <Box sx={{ position: "relative" }}>
@@ -298,7 +304,7 @@ export default function WorkSection() {
                   {index !== steps.length - 1 && (
                     <Box
                       component="img"
-                      src="" // <-- put vector here
+                      src={arrow1} // <-- put vector here
                       alt="arrow"
                       sx={{
                         position: "absolute",

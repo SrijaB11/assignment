@@ -13,15 +13,20 @@ export default function Subscribe() {
         px: 3,
         borderRadius: "24px",
         textAlign: "center",
-        marginTop: "100px",
       }}
     >
       <Typography variant="subtitle1" color="white" mb={2}>
         Subscribe for our tips
       </Typography>
-      <Typography variant="body1" color="white" mb={2}>
+      <Typography
+        variant="body1"
+        color="white"
+        mb={2}
+        fontSize="14px"
+        textAlign="center"
+      >
         Clearly communicate the benefits of subscribing, such as exclusive
-        content.
+        <br /> content.
       </Typography>
       <Box
         sx={{
@@ -31,7 +36,10 @@ export default function Subscribe() {
           gap: 2,
           bgcolor: "white",
           borderRadius: 1,
-          width: "800px",
+          width: "650px",
+
+          padding: "10px 14px",
+          border: "transparent",
         }}
       >
         <TextField
@@ -39,6 +47,7 @@ export default function Subscribe() {
           sx={{
             bgcolor: "white",
             borderRadius: 1,
+            border: "transparent",
           }}
         />
 
