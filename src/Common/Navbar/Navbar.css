@@ -27,7 +27,8 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 10px 20px;
+  padding: 10px 40px;
+  margin: 0 100px;
   background-color: #fff;
   height: auto;
 }

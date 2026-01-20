@@ -16,6 +16,7 @@ export default function TestimonialSection() {
         position: "relative",
         py: { xs: 6, md: 8 },
         overflow: "hidden",
+        paddingRight: 4,
       }}
     >
       {/* TITLE */}
