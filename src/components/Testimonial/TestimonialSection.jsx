@@ -16,7 +16,7 @@ export default function TestimonialSection() {
         position: "relative",
         py: { xs: 6, md: 8 },
         overflow: "hidden",
-        paddingRight: 4,
+        paddingRight: "40px",
       }}
     >
       {/* TITLE */}
@@ -39,6 +39,7 @@ export default function TestimonialSection() {
           flexWrap: "wrap",
           gap: { xs: 4, md: 0 },
           height: { xs: "auto", md: "520px" },
+          marginRight: "20px",
         }}
       >
         {testimonials.map((item, index) => (
