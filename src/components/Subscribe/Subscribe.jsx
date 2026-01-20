@@ -1,5 +1,5 @@
 import { Box, Typography, TextField, Button } from "@mui/material";
-import footerleft from "../../assets/vectors/footerleft.png";
+
 import star from "../../assets/vectors/Vector.png";
 
 export default function Subscribe() {
