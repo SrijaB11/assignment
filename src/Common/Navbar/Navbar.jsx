@@ -7,13 +7,11 @@ import "./Navbar.css";
 function Navbar() {
   return (
     <nav className="navbar">
-      {/* Logo */}
       <div className="nav-left">
         <img src={logo} alt="Logo" />
         <img src={text} alt="CodeArena" />
       </div>
 
-      {/* Nav Links */}
       <ul className="nav-items">
         <li className="nav-items-list">
           <Link to="/" className="nav-link">
@@ -37,13 +35,14 @@ function Navbar() {
         </li>
       </ul>
 
-      {/* Auth Buttons */}
-      <div className="nav-items">
+      <div className="nav-items-right">
         <Link to="/register" className="nav-link">
           <Button
             variant="outlined"
             color="secondary"
             sx={{
+              width: "106px",
+              height: "67px",
               "&:hover": {
                 bgcolor: "primary.main",
                 border: "none",
@@ -60,6 +59,8 @@ function Navbar() {
             variant="contained"
             color="secondary"
             sx={{
+              width: "90px",
+              height: "67px",
               "&:hover": {
                 bgcolor: "primary.main",
               },

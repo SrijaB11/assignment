@@ -4,6 +4,7 @@ import "./Feature.css";
 import featureHighlights from "./Features";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
+import star from "../../assets/vectors/Vector.png";
 
 function Feature() {
   return (
@@ -18,6 +19,9 @@ function Feature() {
         {featureHighlights.map((card) => {
           return <FeatureCard key={card.id} {...card} />;
         })}
+      </div>
+      <div className="vector">
+        <img src={star} alt="star" />
       </div>
     </div>
   );

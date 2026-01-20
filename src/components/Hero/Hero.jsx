@@ -6,6 +6,8 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import star from "../../assets/vectors/Vector.png";
 import starright from "../../assets/vectors/Vectorright.png";
+import herovectorleft from "../../assets/vectors/herovectorleft.png";
+
 function Hero() {
   return (
     <div>
@@ -28,7 +30,16 @@ function Hero() {
             real-time feedback, and a supportive community.
           </Typography>
 
-          <Button variant="contained" color="secondary" sx={{ width: "201px" }}>
+          <Button
+            variant="contained"
+            color="secondary"
+            sx={{
+              width: "201px",
+              "&:hover": {
+                backgroundColor: "#e41f3a",
+              },
+            }}
+          >
             Get Started
           </Button>
         </div>
@@ -40,8 +51,14 @@ function Hero() {
       <div className="vector">
         <img src={star} alt="star" />
       </div>
-      <div className="vector">
+      <div className="vector1">
         <img src={starright} alt="starright" />
+      </div>
+      <div className="vector2">
+        <img src={herovectorleft} alt="herovectorleft" />
+      </div>
+      <div className="vector3">
+        <img src={star} alt="herovectorleft" />
       </div>
     </div>
   );

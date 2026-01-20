@@ -1,10 +1,10 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Avatar } from "@mui/material";
 import TestimonialCard from "./TestimonialCard";
 import testimonials from "./Testimonial";
 import PageBg from "../../assets/images/PageBG.png";
+import star from "../../assets/vectors/Vector.png";
 
 export default function TestimonialSection() {
-  console.log("fdghjk,");
   return (
     <Box
       sx={{
@@ -12,114 +12,233 @@ export default function TestimonialSection() {
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         backgroundPosition: "center",
-        py: 8,
-
-        height: "800px",
+        minHeight: { xs: "auto", md: "900px" },
+        position: "relative",
+        py: { xs: 6, md: 8 },
+        overflow: "hidden",
       }}
     >
-      <Typography variant="h3" align="center" color="common.white" mb={6}>
-        What Our Students <br />
-        Say
+      {/* TITLE */}
+      <Typography
+        variant="h3"
+        align="center"
+        color="white"
+        mb={{ xs: 4, md: 8 }}
+      >
+        What Our Students <br /> Say
       </Typography>
 
+      {/* CARDS WRAPPER */}
       <Box
         sx={{
+          position: "relative",
+          width: "100%",
           display: "flex",
           justifyContent: "center",
-          gap: 4,
           flexWrap: "wrap",
-
-          alignItems: "center",
+          gap: { xs: 4, md: 0 },
+          height: { xs: "auto", md: "520px" },
         }}
       >
-        {testimonials.map((item) => (
-          <TestimonialCard
+        {testimonials.map((item, index) => (
+          <Box
             key={item.id}
-            name={item.name}
-            role={item.role}
-            review={item.review}
-            rating={item.rating}
-            image={item.img}
-          />
+            sx={{
+              position: { xs: "static", md: "absolute", xl: "relative" },
+
+              /* DESKTOP STACK EFFECT */
+              left: {
+                md: `calc(10% + ${index * 420}px)`,
+              },
+              top: {
+                md: `${15 + index * 140}px`,
+              },
+
+              mb: { xs: 4, md: 0 },
+            }}
+          >
+            <TestimonialCard
+              name={item.name}
+              role={item.role}
+              review={item.review}
+              image={item.img}
+            />
+          </Box>
         ))}
       </Box>
+
+      {/* DECORATIVE STARS */}
+      <Avatar
+        src={star}
+        sx={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: 80,
+          height: 80,
+          bgcolor: "transparent",
+          display: { xs: "none", md: "block" },
+        }}
+      />
+
+      <Avatar
+        src={star}
+        sx={{
+          position: "absolute",
+          bottom: -200,
+          right: 0,
+          width: 80,
+          height: 80,
+          bgcolor: "transparent",
+          display: { xs: "none", md: "block" },
+        }}
+      />
     </Box>
   );
 }
 
-// import { Box, Container, Typography } from "@mui/material";
+// import { Box, Typography } from "@mui/material";
 // import TestimonialCard from "./TestimonialCard";
+// import testimonials from "./Testimonial";
+// import PageBg from "../../assets/images/PageBG.png";
+// import star from "../../assets/vectors/Vector.png";
+// import { Avatar } from "@mui/material";
 
-// const OFFSET_X = 60; // horizontal shift (px)
-// const OFFSET_Y = 40; // vertical shift (px)
-
-// // const testimonials = [
-// //   {
-// //     name: "Nutan Sai",
-// //     role: "Student",
-// //     text: "Thanks to CodeArena, I went from barely understanding loops to solving advanced algorithm challenges. I can’t recommend it enough to fellow students!",
-// //     image: "https://i.pravatar.cc/150?img=11",
-// //   },
-// //   {
-// //     name: "Nutan Sai",
-// //     role: "Student",
-// //     text: "Thanks to CodeArena, I went from barely understanding loops to solving advanced algorithm challenges. I can’t recommend it enough to fellow students!",
-// //     image: "https://i.pravatar.cc/150?img=12",
-// //   },
-// //   {
-// //     name: "Nutan Sai",
-// //     role: "Student",
-// //     text: "Thanks to CodeArena, I went from barely understanding loops to solving advanced algorithm challenges. I can’t recommend it enough to fellow students!",
-// //     image: "https://i.pravatar.cc/150?img=13",
-// //   },
-// // ];
-
-// const TestimonialsSection = () => {
+// export default function TestimonialSection() {
 //   return (
 //     <Box
 //       sx={{
-//         backgroundColor: "#3A3F8F",
-//         py: 12,
+//         backgroundImage: `url(${PageBg})`,
+//         backgroundRepeat: "no-repeat",
+//         backgroundSize: "cover",
+//         backgroundPosition: "center",
+//         height: "900px",
+//         position: "relative",
+//         py: 8,
 //         overflow: "hidden",
 //       }}
 //     >
-//       <Container maxWidth="lg">
-//         <Typography variant="h3" color="white" textAlign="center" mb={8}>
-//           What Our Students <br /> Say
-//         </Typography>
+//       <Typography variant="h3" align="center" color="white" mb={8}>
+//         What Our Students <br />
+//         Say
+//       </Typography>
 
-//         {/* Cards wrapper */}
-//         <Box
-//           sx={{
-//             display: "flex",
-//             justifyContent: "center",
-//             position: "relative",
-//             gap: 4,
-//             flexWrap: { xs: "wrap", md: "nowrap" },
-//           }}
-//         >
-//           {testimonials.map((item, i) => (
-//             <Box
-//               key={i}
-//               sx={{
-//                 transform: {
-//                   xs: "none",
-//                   md: `translate(${i * OFFSET_X}px, ${i * OFFSET_Y}px)`,
-//                 },
-//               }}
-//             >
-//               <TestimonialCard
-//                 name={item.name}
-//                 role={item.role}
-//                 text={item.text}
-//                 image={item.image}
-//               />
-//             </Box>
-//           ))}
-//         </Box>
-//       </Container>
+//       {/* RELATIVE WRAPPER */}
+//       <Box
+//         sx={{
+//           position: "relative",
+//           width: "100%",
+//           height: "520px",
+//         }}
+//       >
+//         {testimonials.map((item, index) => (
+//           <Box
+//             key={item.id}
+//             sx={{
+//               position: "absolute",
+
+//               /* ⬅️ LEFT + ⬆️ UP */
+//               left: `calc(10% + ${index * 420}px)`,
+//               top: `${15 + index * 140}px`,
+
+//               "@media (max-width:900px)": {
+//                 position: "static",
+//                 mb: 4,
+//               },
+//             }}
+//           >
+//             <TestimonialCard
+//               name={item.name}
+//               role={item.role}
+//               review={item.review}
+//               rating={item.rating}
+//               image={item.img}
+//             />
+//           </Box>
+//         ))}
+//       </Box>
+
+//       {/* Top-left star */}
+
+//       <Avatar
+//         src={star}
+//         sx={{
+//           position: "absolute",
+//           top: 0,
+//           left: 0,
+//           width: 80,
+//           height: 80,
+//           bgcolor: "transparent",
+//         }}
+//       />
+
+//       <Avatar
+//         src={star}
+//         sx={{
+//           position: "absolute",
+//           bottom: -400,
+//           right: 0,
+//           width: 80,
+//           height: 80,
+//           bgcolor: "transparent",
+//         }}
+//       />
 //     </Box>
 //   );
-// };
+// }
 
-// export default TestimonialsSection;
+// import { Box, Typography } from "@mui/material";
+// import TestimonialCard from "./TestimonialCard";
+// import testimonials from "./Testimonial";
+// import PageBg from "../../assets/images/PageBG.png";
+
+// export default function TestimonialSection() {
+//   return (
+//     <Box
+//       sx={{
+//         position: "relative",
+//         backgroundImage: `url(${PageBg})`,
+//         backgroundRepeat: "no-repeat",
+//         backgroundSize: "cover",
+//         backgroundPosition: "center",
+//         height: "800px",
+//         px: 8,
+//         py: 6,
+//         overflow: "hidden",
+//       }}
+//     >
+//       {/* Title */}
+//       <Typography variant="h3" align="center" color="common.white" mb={6}>
+//         What Our Students <br /> Say
+//       </Typography>
+
+//       {/* Cards Wrapper */}
+//       <Box sx={{ position: "relative", height: "600px" }}>
+//         {testimonials.map((item, index) => (
+//           <Box
+//             key={item.id}
+//             sx={{
+//               position: "absolute",
+
+//               /* 👇 EXACT FIGMA-LIKE SPACING */
+//               left: `${index * 360}px`,
+//               top: `${index * 120}px`,
+
+//               /* center the whole group */
+//               transform: "translateX(120px)",
+
+//               /* mobile fallback */
+//               "@media (max-width:900px)": {
+//                 position: "static",
+//                 transform: "none",
+//                 mb: 4,
+//               },
+//             }}
+//           >
+//             <TestimonialCard {...item} />
+//           </Box>
+//         ))}
+//       </Box>
+//     </Box>
+//   );
+// }

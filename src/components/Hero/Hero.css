@@ -1,26 +1,138 @@
+/* ================= HERO BASE ================= */
+
 .hero-section {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 1248px;
-  height: 680px;
+
+  width: 100%;
+  max-width: 1248px;
+  min-height: 680px;
+
   gap: 40px;
+  margin: 80px auto 0;
+  padding: 0 24px;
 }
+
+/* LEFT CONTENT */
 .left-hero-section {
   width: 660px;
+  max-width: 100%;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: left;
+  align-items: flex-start;
+
   gap: 36px;
 }
+
+/* RIGHT IMAGE */
 .right-hero-section {
   width: 400px;
+  max-width: 100%;
   height: 680px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+/* ================= VECTORS ================= */
+
 .vector {
   position: absolute;
-  margin-top: -100px;
+  left: 60px;
+  top: 710px;
+}
+
+.vector1 {
+  position: absolute;
+  top: 80px;
+  right: 0;
+}
+
+.vector2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.vector3 {
+  position: absolute;
+  top: 820px;
+  right: 100px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Large tablets */
+@media (max-width: 1200px) {
+  .hero-section {
+    gap: 24px;
+  }
+
+  .left-hero-section {
+    gap: 28px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 60px;
+  }
+
+  .left-hero-section {
+    align-items: center;
+    width: 100%;
+  }
+
+  .right-hero-section {
+    width: 100%;
+    height: auto;
+  }
+
+  .vector,
+  .vector1,
+  .vector2,
+  .vector3 {
+    transform: scale(0.8);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero-section {
+    margin-top: 40px;
+    padding: 0 16px;
+  }
+
+  .left-hero-section {
+    gap: 20px;
+  }
+
+  .right-hero-section {
+    display: none; /* ⭐ hide image on small screens */
+  }
+
+  .vector,
+  .vector1,
+  .vector2,
+  .vector3 {
+    display: none; /* ⭐ hide decorative vectors */
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .hero-section {
+    margin-top: 24px;
+  }
+
+  .left-hero-section {
+    gap: 16px;
+  }
 }

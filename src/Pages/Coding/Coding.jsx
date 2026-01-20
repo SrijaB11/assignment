@@ -235,7 +235,7 @@ export default function Coding() {
 function Header() {
   return (
     <Box textAlign="center" mb={4}>
-      <Typography variant="h3">
+      <Typography variant="h3" color="secondary">
         Coding <span style={{ color: "#e11d48" }}>Questions</span>
       </Typography>
     </Box>
@@ -310,6 +310,7 @@ function QuestionsTable({ onSolve }) {
                   variant="contained"
                   color="primary"
                   startIcon={<LightbulbOutlinedIcon />}
+                  onClick={onSolve}
                 >
                   Solve
                 </Button>

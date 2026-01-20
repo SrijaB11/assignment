@@ -2,6 +2,6 @@
   background-image: url("../../assets/images/BgSymbol.png");
   width: 535px;
   height: 590px;
-
+  padding: 60px 20px;
   background-size: cover;
 }
