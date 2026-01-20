@@ -463,28 +463,8 @@ export default function CodingTemplate() {
         </Typography>
 
         <Typography color="#6B7280" fontSize="14px">
-          Problem Statement You have been given a sorted array/list ARR
-          consisting of ‘N’ elements. You are also given an integer ‘K’. Now,
-          your task is to find the first and last occurrence of ‘K’ in ARR. Note
-          : 1. If ‘K’ is not present in the array, then the first and the last
-          occurrence will be -1.  2. ARR may contain duplicate elements.  For
-          example, if ARR = [0, 1, 1, 5] and K = 1, then the first and last
-          occurrence of 1 will be 1(0 - indexed) and Detailed explanation (
-          Input/output format, Notes, Images ) keyboard_arrow_down Input Format
-          The first line of input contains an integer 'T' which denotes the
-          number of test cases or queries to be run. Then the test cases
-          follow.  The first line of each test case contains two single-space
-          separated integers ‘N’ and ‘K’, respectively.  The second line of each
-          test case contains ‘N’ single space-separated integers denoting the
-          elements of the array/list ARR.  Output Format : Return two
-          single-space separated integers denoting the first and the last
-          occurrence of ‘K’ in ARR, respectively.  Note: You do not need to
-          print anything; it has already been taken care of. Just implement the
-          given function.  Constraints: Explanation Of Sample Output 1: For the
-          first test case, 3 is not present in the array. Hence the first and
-          last occurrence of 3 is -1 and -1.  For the second test case, the
-          first occurrence of 2 in at index 4 and last occurrence is at index
-          7.  Sample Inputt
+          You are given a sorted array and a target value. Find the first and
+          last position of the target.
         </Typography>
       </Paper>
 
@@ -508,7 +488,7 @@ export default function CodingTemplate() {
           }}
         >
           <Typography fontSize="14px" color="#9CA3AF">
-            // Write your code here
+            {/* // Write your code here */}
           </Typography>
         </Paper>
 
